@@ -1,4 +1,5 @@
-const expectchai=require('chai').expect
+import { expect } from 'chai'
+
 // describe('github website',()=>
 // {
 
