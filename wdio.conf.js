@@ -4,6 +4,7 @@ exports.config = {
     // ====================
     // Runner Configuration
     // ====================
+    baseUrl: process.env.BASE_URL ,
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
     //
