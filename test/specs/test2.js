@@ -82,7 +82,7 @@ import { expect } from 'chai'
 describe('rahul shetty website', () => {
     it("rahul buttons", async () => {
 
-        await browser.url("/");
+        await browser.url("/loginpagePractise/");
         await browser.pause(2000); // allow initial load (important for Jenkins)
 
         const username = await $("#username");
