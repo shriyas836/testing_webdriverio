@@ -55,18 +55,18 @@ exports.config = {
     //     browserName: 'chrome'
     // }],
     capabilities: [{
-    browserName: 'chrome',
-    'goog:chromeOptions': {
-        binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
-        args: [
-            '--headless=new',
-            '--no-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--remote-debugging-port=9222',
-            '--window-size=1920,1080'
-        ]
-    }
+    browserName: 'chrome'
+    // 'goog:chromeOptions': {
+    //     binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
+    //     args: [
+    //         '--headless=new',
+    //         '--no-sandbox',
+    //         '--disable-dev-shm-usage',
+    //         '--disable-gpu',
+    //         '--remote-debugging-port=9222',
+    //         '--window-size=1920,1080'
+    //     ]
+    // }
 }],
 
 
@@ -128,7 +128,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    //services: ['visual'],
+    services: ['visual'],
     //services:['chromedriver'],
 
     // Framework you want to run your specs with.
