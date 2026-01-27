@@ -1,4 +1,4 @@
-import { expect } from 'chai'
+//import { expect } from 'chai'
 
 // describe('github website',()=>
 // {
@@ -34,6 +34,7 @@ import { expect } from 'chai'
    
 //     })
 // })
+const { expect } = require('chai')
 describe('rahul shetty website',()=>
 {
     it("rahul buttons",async()=>
