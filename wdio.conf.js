@@ -357,7 +357,7 @@ exports.config = {
     connectionRetryCount: 3,
 
     // ✅ REQUIRED for Docker
-    services: ['chromedriver'],
+    services: ['selenium-standalone'],
 
     framework: 'mocha',
 
