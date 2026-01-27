@@ -105,7 +105,7 @@ pipeline {
                 echo "Browser: $BROWSER"
                 echo "URL: $BASE_URL"
 
-                docker run --rm \
+                /usr/local/bin/docker run --rm \
                 -e BROWSER=$BROWSER \
                 -e BASE_URL=$BASE_URL \
                 -v $WORKSPACE/allure-results:/app/allure-results \
