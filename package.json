@@ -8,7 +8,7 @@
     "@wdio/spec-reporter": "^8.43.0",
     "@wdio/visual-service": "^9.1.0",
     "allure-commandline": "^2.36.0",
-    "@wdio/chromedriver-service": "^8.0.0",
+    "@wdio/chromedriver-service": "^8.46.0",
 
     "expect-webdriverio": "^4.15.4"
   },
