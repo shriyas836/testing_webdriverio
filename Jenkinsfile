@@ -94,7 +94,8 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t wdio-tests .'
+                sh '/usr/local/bin/docker build -t wdio-tests .'
+
             }
         }
 
