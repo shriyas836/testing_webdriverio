@@ -2,7 +2,6 @@ FROM node:20-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Chromium and dependencies
 RUN apt-get update && apt-get install -y \
     chromium \
     chromium-driver \
@@ -27,8 +26,11 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install --verbose
+
+RUN rm -rf node_modules package-lock.json && \
+    npm install --legacy-peer-deps --no-audit --no-fund
 
 COPY . .
 
 CMD ["npx", "wdio", "run", "wdio.conf.js"]
+
