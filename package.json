@@ -9,6 +9,7 @@
     "@wdio/visual-service": "^9.1.0",
     "allure-commandline": "^2.36.0",
     "@wdio/chromedriver": "^8.0.0",
+    "chromedriver": "^120.0.0",
     "expect-webdriverio": "^4.15.4"
   },
   "scripts": {
