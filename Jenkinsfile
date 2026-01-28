@@ -62,7 +62,7 @@
     //     }
     // }
     
-    pipeline {
+pipeline {
     agent any
 
     stages {
@@ -70,6 +70,16 @@
         stage('Checkout Code') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Docker Check') {
+            steps {
+                sh '''
+                    echo "Checking Docker availability..."
+                    which docker
+                    docker --version
+                '''
             }
         }
 
@@ -95,6 +105,7 @@
         }
     }
 }
+
 
 
     
