@@ -54,20 +54,33 @@ exports.config = {
     // capabilities: [{
     //     browserName: 'chrome'
     // }],
+//     capabilities: [{
+//     browserName: 'chrome'
+//     'goog:chromeOptions': {
+//         binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
+//         args: [
+//             '--headless=new',
+//             '--no-sandbox',
+//             '--disable-dev-shm-usage',
+//             '--disable-gpu',
+//             '--remote-debugging-port=9222',
+//             '--window-size=1920,1080'
+//         ]
+//     }
+// }],
     capabilities: [{
-    browserName: 'chrome'
+    browserName: 'chrome',
     'goog:chromeOptions': {
-        binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
+        binary: '/usr/bin/chromium',
         args: [
-            '--headless=new',
+            '--headless',
             '--no-sandbox',
             '--disable-dev-shm-usage',
-            '--disable-gpu',
-            '--remote-debugging-port=9222',
-            '--window-size=1920,1080'
+            '--disable-gpu'
         ]
     }
 }],
+
 
 
     //
