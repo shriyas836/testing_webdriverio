@@ -51,23 +51,23 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: [{
-        browserName: 'chrome'
-    }],
     // capabilities: [{
-    // browserName: 'chrome'
-    // 'goog:chromeOptions': {
-    //     binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
-    //     args: [
-    //         '--headless=new',
-    //         '--no-sandbox',
-    //         '--disable-dev-shm-usage',
-    //         '--disable-gpu',
-    //         '--remote-debugging-port=9222',
-    //         '--window-size=1920,1080'
-    //     ]
-    // }
-// }],
+    //     browserName: 'chrome'
+    // }],
+    capabilities: [{
+    browserName: 'chrome'
+    'goog:chromeOptions': {
+        binary: '/usr/bin/chromium',   // 👈 VERY IMPORTANT
+        args: [
+            '--headless=new',
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--remote-debugging-port=9222',
+            '--window-size=1920,1080'
+        ]
+    }
+}],
 
 
     //
