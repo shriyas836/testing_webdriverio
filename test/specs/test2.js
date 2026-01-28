@@ -42,6 +42,8 @@ describe('rahul shetty website',()=>
     {
        // await browser.url("https://rahulshettyacademy.com/loginpagePractise")
        await browser.url("/loginpagePractise/")
+       await browser.url("https://rahulshettyacademy.com/loginpagePractise")
+       //await browser.url("/")
         await $("#username").setValue("rahulshettyacademy")
         await browser.pause(2000)
         await $("#password").setValue("learning")

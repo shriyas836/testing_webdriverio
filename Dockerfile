@@ -1,3 +1,4 @@
+
 FROM node:20-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -33,4 +34,3 @@ RUN rm -rf node_modules package-lock.json && \
 COPY . .
 
 CMD ["npx", "wdio", "run", "wdio.conf.js"]
-
