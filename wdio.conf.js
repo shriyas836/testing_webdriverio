@@ -339,11 +339,12 @@ exports.config = {
         './test/specs/**/*.js'
    
     ],
-    
+
     automationProtocol: 'webdriver',
 
 
     maxInstances: 1,
+    services:[],
 
     capabilities: [{
         browserName: 'chrome',
