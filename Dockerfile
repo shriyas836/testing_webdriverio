@@ -2,10 +2,10 @@
 # FROM node:20-bullseye
 
 # ENV DEBIAN_FRONTEND=noninteractive
+# ENV DOCKER=true
 
 # RUN apt-get update && apt-get install -y \
 #     chromium \
-#     chromium-driver \
 #     fonts-liberation \
 #     libasound2 \
 #     libatk-bridge2.0-0 \
@@ -27,22 +27,21 @@
 # WORKDIR /app
 
 # COPY package*.json ./
-
-# RUN rm -rf node_modules package-lock.json && \
-#     npm install --legacy-peer-deps --no-audit --no-fund
+# RUN npm install --legacy-peer-deps --no-audit --no-fund
 
 # COPY . .
 
 # CMD ["npx", "wdio", "run", "wdio.conf.js"]
+
+
+
 FROM node:20-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEDRIVER_BIN=/usr/bin/chromedriver
 
 RUN apt-get update && apt-get install -y \
     chromium \
-    chromium-driver \
     fonts-liberation \
     libasound2 \
     libatk-bridge2.0-0 \
@@ -69,4 +68,6 @@ RUN npm install --legacy-peer-deps --no-audit --no-fund
 COPY . .
 
 CMD ["npx", "wdio", "run", "wdio.conf.js"]
+
+
 
