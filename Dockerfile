@@ -69,3 +69,4 @@ RUN npm install --legacy-peer-deps --no-audit --no-fund
 COPY . .
 
 CMD ["npx", "wdio", "run", "wdio.conf.js"]
+

@@ -27,11 +27,24 @@ pipeline {
             }
         }
 
+        // stage('Run Automation Tests') {
+        //     steps {
+        //         sh 'docker run --rm --platform linux/arm64 wdio-test'
+        //   }
+        // }
         stage('Run Automation Tests') {
-            steps {
-                sh 'docker run --rm --platform linux/arm64 wdio-test'
-          }
-        }
+    steps {
+        sh '''
+        docker run --rm \
+          -e DOCKER=true \
+          -e CHROME_BIN=/usr/bin/chromium \
+          -e CHROMEDRIVER_BIN=/usr/bin/chromedriver \
+          -e WDIO_MAX_INSTANCES=1 \
+          wdio-test
+        '''
+    }
+}
+
 
     }
 
