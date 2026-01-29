@@ -26,7 +26,9 @@ describe('',()=>
         await browser.pause(2000)
         console.log(await item[1].isSelected())
         console.log(await item[2].isSelected())
-        await browser.saveScreenshot('screenshot.jpeg')
+        await browser.saveScreenshot('screenshot.png')
+        
+
         await browser.pause(2000)
 
 

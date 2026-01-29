@@ -40,8 +40,8 @@ describe('rahul shetty website',()=>
 {
     it("rahul buttons",async()=>
     {
-       // await browser.url("https://rahulshettyacademy.com/loginpagePractise")
-       await browser.url("/loginpagePractise/")
+       await browser.url("https://rahulshettyacademy.com/loginpagePractise")
+       //await browser.url("/loginpagePractise/")
        await browser.url("https://rahulshettyacademy.com/loginpagePractise")
        //await browser.url("/")
         await $("#username").setValue("rahulshettyacademy")
